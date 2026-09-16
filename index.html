@@ -880,12 +880,6 @@
       gap: 20px;
     }
 
-    @media (max-width: 720px) {
-      .proj-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
     .proj-card {
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -954,6 +948,129 @@
       border-radius: 20px;
       text-transform: uppercase;
       letter-spacing: 0.03em;
+    }
+
+    /* ---------- mobile 2-column card layout ---------- */
+    @media (max-width: 768px) {
+      .proj-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 14px !important;
+      }
+
+      .proj-card {
+        padding: 18px 16px !important;
+        border-radius: 6px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+      }
+
+      .proj-top {
+        margin-bottom: 10px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+      }
+
+      .proj-name {
+        font-size: 13.5px !important;
+        line-height: 1.3 !important;
+        word-break: break-word !important;
+      }
+
+      .proj-link {
+        font-size: 10px !important;
+        padding: 3px 8px !important;
+        border-radius: 3px !important;
+        flex-shrink: 0 !important;
+      }
+
+      .proj-desc {
+        font-size: 12px !important;
+        line-height: 1.55 !important;
+        margin-bottom: 12px !important;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 3 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+      }
+
+      .tag-row {
+        gap: 5px !important;
+        margin-top: auto !important;
+      }
+
+      .tag {
+        font-size: 9px !important;
+        padding: 3px 8px !important;
+        border-radius: 12px !important;
+      }
+
+      .tag-row .tag:nth-child(n+4) {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .wrap {
+        padding: 0 16px;
+      }
+
+      .proj-grid {
+        gap: 10px !important;
+      }
+
+      .proj-card {
+        padding: 14px 12px !important;
+        border-radius: 6px !important;
+      }
+
+      .proj-name {
+        font-size: 12.5px !important;
+      }
+
+      .proj-desc {
+        font-size: 11px !important;
+        line-height: 1.45 !important;
+        -webkit-line-clamp: 3 !important;
+        margin-bottom: 10px !important;
+      }
+
+      .proj-link {
+        font-size: 9.5px !important;
+        padding: 2px 6px !important;
+      }
+
+      .tag {
+        font-size: 8.5px !important;
+        padding: 2px 7px !important;
+        border-radius: 10px !important;
+      }
+
+      .tag-row .tag:nth-child(n+3) {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 350px) {
+      .proj-grid {
+        gap: 8px !important;
+      }
+
+      .proj-card {
+        padding: 12px 9px !important;
+      }
+
+      .proj-name {
+        font-size: 11.5px !important;
+      }
+
+      .proj-desc {
+        font-size: 10px !important;
+        line-height: 1.35 !important;
+        -webkit-line-clamp: 2 !important;
+      }
     }
 
     /* ---------- skills ---------- */
