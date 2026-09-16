@@ -5,6 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daris Yusyfa Atqia — Web Developer</title>
+  <meta name="description"
+    content="Portfolio of Daris Yusyfa Atqia — Informatics Engineering graduate building web applications, IT support, and data management." />
+  <meta property="og:title" content="Daris Yusyfa Atqia — Web Developer" />
+  <meta property="og:description" content="Portfolio & selected projects by Daris Yusyfa Atqia." />
+  <meta property="og:type" content="website" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230e1116'/><text x='6' y='22' fill='%2363d2c4' font-family='monospace' font-weight='bold' font-size='18'>&gt;_</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -354,20 +361,35 @@
       }
     }
 
-    .hero h1 {
-      font-family: 'JetBrains Mono', monospace;
-      font-weight: 800;
-      font-size: clamp(34px, 6vw, 58px);
-      line-height: 1.05;
-      letter-spacing: -0.01em;
-      margin: 0 0 20px 0;
+    /* ---------- hero title & letter particle animation ---------- */
+    .hero-title-wrap {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
     }
 
-    .hero h1 .cursor {
-      display: inline-block;
-      width: 0.5ch;
-      background: var(--seal);
-      animation: caret 1s steps(1) infinite;
+    .hero-name-heading {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+
+    #hero-letter-particles {
+      display: block;
+      cursor: default;
+      max-width: 100%;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
     @keyframes caret {
@@ -1240,11 +1262,17 @@
       <div class="hero-grid">
         <div>
           <div class="eyebrow">available for work</div>
-          <h1>Daris Yusyfa<br>Atqia<span class="cursor">&nbsp;</span></h1>
+          <div class="hero-title-wrap">
+            <h1 class="hero-name-heading">
+              <span class="sr-only">Daris Yusyfa Atqia</span>
+              <canvas id="hero-letter-particles" aria-hidden="true"></canvas>
+            </h1>
+          </div>
           <p class="lede">
-            Fresh Informatics Engineering graduate building <strong>web applications</strong>
-            front to back — from React interfaces to Express APIs, with a detail-oriented
-            eye carried over from years of administrative and data-accuracy work.
+            Informatics Engineering graduate building <strong>web applications</strong>
+            front to back — from React interfaces to Express APIs, with strong attention
+            to detail and data accuracy honed through IT support and administrative experience (MS Office &amp; Google
+            Workspace).
           </p>
           <div class="hero-cta">
             <a href="https://github.com/DarisYusyfa" target="_blank" rel="noopener" class="btn btn-primary">View
@@ -1299,7 +1327,7 @@
           <div class="tl-date">Feb 2025 — Jan 2026</div>
           <div class="tl-line"></div>
           <div>
-            <div class="tl-role">Marketplace &amp; Order Administration</div>
+            <div class="tl-role">Marketplace &amp; Order Administration &amp; IT Support</div>
             <div class="tl-org">PT. Sindo — Bandung</div>
             <div class="tl-desc">Managed product listings across marketplace platforms, handled order administration and
               customer data, and supported basic digital marketing activities.</div>
@@ -1332,7 +1360,7 @@
           <div class="tl-date">Oct 2019 — Jan 2020</div>
           <div class="tl-line"></div>
           <div>
-            <div class="tl-role">Administration &amp; Data Entry</div>
+            <div class="tl-role">Administration Data Entry &amp; IT Support</div>
             <div class="tl-org">SMP Negeri 1 Cijati — Cianjur</div>
             <div class="tl-desc">Input and validated data using Excel and Google Sheets; prepared administrative reports
               and managed digital documents with a focus on accuracy.</div>
@@ -1347,6 +1375,20 @@
       <div class="section-tag"><span class="n">03</span> // projects/</div>
       <h2 class="section-title">Selected projects</h2>
       <div class="proj-grid">
+
+        <div class="proj-card reveal">
+          <div class="proj-top">
+            <div class="proj-name">affiliatetools</div>
+            <a class="proj-link" href="https://affiliattoolls.ai.studio/" target="_blank" rel="noopener">live ↗</a>
+          </div>
+          <p class="proj-desc">AI productivity suite for content creators and affiliate marketers — features product script narration generation, natural Text-to-Speech voiceovers, viral hashtag generator, and AI Vision chat.</p>
+          <div class="tag-row">
+            <span class="tag">AI Suite</span>
+            <span class="tag">React</span>
+            <span class="tag">TTS &amp; Vision</span>
+            <span class="tag">Live app</span>
+          </div>
+        </div>
 
         <div class="proj-card reveal">
           <div class="proj-top">
@@ -1476,20 +1518,21 @@
     <section id="contact" data-num="06">
       <div class="section-tag"><span class="n">06</span> // contact.sh</div>
       <div class="contact-inner">
-        <div class="contact-big reveal">Let's build<br>something<br><a href="mailto:yusyfadaris@gmail.com">together now</a>.
+        <div class="contact-big reveal">Let's build<br>something<br><a href="mailto:yusyfadaris@gmail.com">together
+            now</a>.
         </div>
         <div class="contact-list reveal">
           <a href="mailto:yusyfadaris@gmail.com">yusyfadaris@gmail.com</a>
           <a href="tel:+6287777843845">+62 877-7784-3845</a>
           <a href="https://github.com/DarisYusyfa" target="_blank" rel="noopener">github.com/DarisYusyfa</a>
-          <a href="#" onclick="return false;">Cianjur, Indonesia</a>
+          <a href="https://maps.google.com/?q=Cianjur,+Indonesia" target="_blank" rel="noopener">Cianjur, Indonesia</a>
         </div>
       </div>
     </section>
 
   </div>
 
-  <footer>Designed &amp; built by Daris Yusyfa Atqia — 2026</footer>
+  <footer>Designed &amp; built by Daris Yusyfa Atqia — <span id="year">2026</span></footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script>
@@ -1694,31 +1737,97 @@
         '> whoami',
         'daris_yusyfa_atqia',
         '> role',
-        'web developer',
+        'web dev / it support / data entry',
         '> stack',
-        'react / vue / express',
+        'react / postgres / node',
         '> status',
         'open_to_work: true',
         '> _'
       ];
       let lineIndex = 0, charIndex = 0, frame = 0;
 
+      // ----- screen constellation particles (inside CRT monitor) -----
+      const screenParticles = [];
+      const screenColors = [
+        { r: 99, g: 210, b: 196 },   // cyan/teal
+        { r: 255, g: 255, b: 255 },  // white
+        { r: 226, g: 64, b: 43 },    // seal coral
+        { r: 160, g: 247, b: 238 }   // light cyan
+      ];
+      for (let i = 0; i < 32; i++) {
+        const c = screenColors[i % screenColors.length];
+        screenParticles.push({
+          x: Math.random() * screenCanvas.width,
+          y: Math.random() * screenCanvas.height,
+          vx: (Math.random() - 0.5) * 0.7,
+          vy: (Math.random() - 0.5) * 0.7,
+          size: Math.random() * 2 + 1.2,
+          color: c,
+          alpha: Math.random() * 0.45 + 0.35,
+          pulse: Math.random() * Math.PI * 2,
+          pulseSpeed: 0.03 + Math.random() * 0.02
+        });
+      }
+
       function drawScreen() {
         ctx.fillStyle = '#060907';
         ctx.fillRect(0, 0, screenCanvas.width, screenCanvas.height);
-        ctx.font = '28px "JetBrains Mono", monospace';
+
+        // 1. Animated constellation particles inside CRT screen
+        if (!reduceMotion) {
+          for (let i = 0; i < screenParticles.length; i++) {
+            const p = screenParticles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+            p.pulse += p.pulseSpeed;
+
+            if (p.x < 0 || p.x > screenCanvas.width) p.vx *= -1;
+            if (p.y < 0 || p.y > screenCanvas.height) p.vy *= -1;
+
+            const pAlpha = p.alpha + Math.sin(p.pulse) * 0.15;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, ${Math.max(0.15, Math.min(0.85, pAlpha))})`;
+            ctx.shadowColor = `rgba(${p.color.r}, ${p.color.g}, ${p.color.b}, 0.8)`;
+            ctx.shadowBlur = p.size * 3;
+            ctx.fill();
+            ctx.shadowBlur = 0;
+
+            // Constellation connecting lines
+            for (let j = i + 1; j < screenParticles.length; j++) {
+              const p2 = screenParticles[j];
+              const cdx = p.x - p2.x;
+              const cdy = p.y - p2.y;
+              const cdist = Math.sqrt(cdx * cdx + cdy * cdy);
+
+              if (cdist < 76) {
+                const lineAlpha = (1 - cdist / 76) * 0.26;
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(p2.x, p2.y);
+                ctx.strokeStyle = `rgba(99, 210, 196, ${lineAlpha})`;
+                ctx.lineWidth = 0.9;
+                ctx.stroke();
+              }
+            }
+          }
+        }
+
+        // 2. Terminal CLI text
+        ctx.font = '24px "JetBrains Mono", monospace';
         ctx.fillStyle = '#63d2c4';
         ctx.textBaseline = 'top';
         let y = 24;
         for (let i = 0; i < lineIndex; i++) {
           ctx.fillText(lines[i], 20, y);
-          y += 38;
+          y += 34;
         }
         if (lineIndex < lines.length) {
           const partial = lines[lineIndex].slice(0, charIndex);
           ctx.fillText(partial, 20, y);
         }
-        // scanlines
+
+        // 3. CRT Scanlines
         ctx.globalAlpha = 0.08;
         ctx.fillStyle = '#000000';
         for (let sy = 0; sy < screenCanvas.height; sy += 4) {
@@ -1740,7 +1849,6 @@
           lineIndex++;
           charIndex = 0;
         }
-        drawScreen();
       }
 
       const screenMat = new THREE.MeshBasicMaterial({ map: screenTex });
@@ -1802,6 +1910,7 @@
 
         if (!reduceMotion) {
           typeTick();
+          drawScreen(); // continuous live render of particles inside the monitor screen
 
           rig.rotation.y += (targetRotY + dragRotY - rig.rotation.y) * 0.06;
           rig.rotation.x += (targetRotX + dragRotX - rig.rotation.x) * 0.06;
@@ -1915,6 +2024,198 @@
         rig.style.transform = `rotate(${angle.toFixed(2)}deg)`;
       }
       requestAnimationFrame(tick);
+    })();
+
+    // dynamic current year
+    (function () {
+      const yr = document.getElementById('year');
+      if (yr) yr.textContent = new Date().getFullYear();
+    })();
+
+    // ---------- hero interactive particle text (formed by particles) ----------
+    (function () {
+      const canvas = document.getElementById('hero-letter-particles');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      let particles = [];
+      let width = 0, height = 0;
+      let fontSize = 48;
+      let lineSpacing = 54;
+      let cursorX = 0, cursorY = 0, cursorW = 0, cursorH = 0;
+      let mouse = { x: -9999, y: -9999, radius: 75 };
+
+      // Palette: cyan accent, bright white, mint, and subtle red sparks
+      const colorPalette = [
+        '#63d2c4', '#63d2c4', '#63d2c4',
+        '#ffffff', '#ffffff',
+        '#aef6ed', '#d5fbf6',
+        '#e2402b'
+      ];
+
+      function Particle(originX, originY) {
+        this.originX = originX;
+        this.originY = originY;
+        // Start slightly scattered for an assemble animation on load
+        this.x = originX + (Math.random() - 0.5) * 50;
+        this.y = originY + (Math.random() - 0.5) * 50;
+        this.vx = (Math.random() - 0.5) * 3;
+        this.vy = (Math.random() - 0.5) * 3;
+        this.size = Math.random() * 1.1 + 1.25; // 1.25px - 2.35px radius
+        this.color = colorPalette[Math.floor(Math.random() * colorPalette.length)];
+        this.ease = 0.07 + Math.random() * 0.04;
+        this.friction = 0.86 + Math.random() * 0.04;
+      }
+
+      Particle.prototype.update = function () {
+        // 1. Mouse dispersion force
+        const dx = mouse.x - this.x;
+        const dy = mouse.y - this.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < mouse.radius) {
+          const force = (1 - dist / mouse.radius);
+          const angle = Math.atan2(dy, dx);
+          this.vx -= Math.cos(angle) * force * 9;
+          this.vy -= Math.sin(angle) * force * 9;
+        }
+
+        // 2. Spring back to origin letter pixel
+        const homeDx = this.originX - this.x;
+        const homeDy = this.originY - this.y;
+        this.vx += homeDx * this.ease;
+        this.vy += homeDy * this.ease;
+
+        // 3. Friction
+        this.vx *= this.friction;
+        this.vy *= this.friction;
+
+        // 4. Update
+        this.x += this.vx;
+        this.y += this.vy;
+      };
+
+      Particle.prototype.draw = function () {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      };
+
+      function initParticles() {
+        const vw = window.innerWidth;
+        fontSize = Math.max(34, Math.min(vw * 0.058, 56));
+        lineSpacing = fontSize * 1.1;
+
+        // Measure on an offscreen scratch canvas
+        const scratch = document.createElement('canvas');
+        const sctx = scratch.getContext('2d');
+        sctx.font = `800 ${fontSize}px 'JetBrains Mono', monospace`;
+        const w1 = sctx.measureText('Daris Yusyfa').width;
+        const w2 = sctx.measureText('Atqia').width;
+
+        cursorW = fontSize * 0.46;
+        cursorH = fontSize * 0.88;
+        cursorX = w2 + 8;
+        cursorY = lineSpacing + fontSize * 0.12;
+
+        const totalW = Math.ceil(Math.max(w1, w2 + cursorW + 20));
+        const totalH = Math.ceil(lineSpacing * 2 + fontSize * 0.35);
+
+        scratch.width = totalW;
+        scratch.height = totalH;
+
+        sctx.font = `800 ${fontSize}px 'JetBrains Mono', monospace`;
+        sctx.fillStyle = '#ffffff';
+        sctx.textBaseline = 'top';
+        sctx.fillText('Daris Yusyfa', 0, 0);
+        sctx.fillText('Atqia', 0, lineSpacing);
+
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = totalW;
+        height = totalH;
+
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        ctx.scale(dpr, dpr);
+
+        // Sample text pixels
+        const imgData = sctx.getImageData(0, 0, totalW, totalH).data;
+        particles = [];
+
+        // Sample step: 3 pixels gives a dense, crisp, stunning particle font!
+        const step = 3;
+        for (let y = 0; y < totalH; y += step) {
+          for (let x = 0; x < totalW; x += step) {
+            const idx = (y * totalW + x) * 4;
+            const alpha = imgData[idx + 3];
+            if (alpha > 120) {
+              particles.push(new Particle(x, y));
+            }
+          }
+        }
+      }
+
+      window.addEventListener('resize', initParticles);
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(initParticles);
+      }
+
+      function updateMousePos(clientX, clientY) {
+        const rect = canvas.getBoundingClientRect();
+        mouse.x = clientX - rect.left;
+        mouse.y = clientY - rect.top;
+      }
+
+      window.addEventListener('pointermove', (e) => {
+        updateMousePos(e.clientX, e.clientY);
+      }, { passive: true });
+
+      window.addEventListener('pointerleave', () => {
+        mouse.x = -9999;
+        mouse.y = -9999;
+      });
+
+      canvas.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 0) {
+          updateMousePos(e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: true });
+
+      canvas.addEventListener('touchend', () => {
+        mouse.x = -9999;
+        mouse.y = -9999;
+      });
+
+      initParticles();
+      setTimeout(initParticles, 350);
+      setTimeout(initParticles, 1000);
+
+      function animate(now) {
+        requestAnimationFrame(animate);
+        ctx.clearRect(0, 0, width, height);
+
+        // Draw glowing particles
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          if (!reduceMotion) {
+            p.update();
+          }
+          p.draw();
+        }
+
+        // Blinking red cursor next to Atqia
+        if (Math.floor(now / 520) % 2 === 0) {
+          ctx.fillStyle = '#e2402b';
+          ctx.fillRect(cursorX, cursorY, cursorW, cursorH);
+        }
+      }
+
+      requestAnimationFrame(animate);
     })();
   </script>
 
